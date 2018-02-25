@@ -1,0 +1,11 @@
+@CHARSET "UTF-8";
+#mainBody{ }
+.title{ text-align: center; }
+.tools{ margin-left: 120px; }
+.addLink{ margin-left: 450px; }
+.tb{ margin: auto; }
+.filterPage{ width: 100%; text-align: center; position: relative; padding-top: 10px; }
+#prePageLink{ opacity: 0.4; }
+#curPageLink{ color: red; }
+#nextPageLink{ opacity: 0.4; }
+.op{ color: red; }

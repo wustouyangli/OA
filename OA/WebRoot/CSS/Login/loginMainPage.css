@@ -1,0 +1,14 @@
+@CHARSET "UTF-8";
+* {margin: 0;padding: 0}
+#calendar {width: 210px;margin-right: 10px;overflow: hidden;padding: 20px;position: relative;}
+#calendar h4 {text-align: center;margin-bottom: 10px}
+#calendar .a1 {position: absolute;top: 20px;left: 20px;}
+#calendar .a2 {position: absolute;top: 20px;right: 20px;}
+#calendar .week {height: 30px;line-height: 20px;border-bottom: 1px solid #000;margin-bottom: 10px}
+#calendar .week li {float: left;width: 30px;height: 30px;text-align: center;list-style: none;}
+#calendar .dateList {overflow: hidden;clear: both}
+#calendar .dateList li {float: left;width: 30px;height: 30px;text-align: center;line-height: 30px;list-style: none;}
+#calendar .dateList .ccc {color: #ccc;}
+#calendar .dateList .red {background: #F90;color: #fff;}
+#calendar .dateList .sun {color: #f00;}
+.smallImg{ margin: 20px;box-shadow: 3px 3px 4px #000; height: 60px; width: 100px;cursor: pointer;}

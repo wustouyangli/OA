@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+  <constant name="struts.ui.theme" value="simple" />
+  <constant name="struts.i18n.encoding" value="UTF-8" />
+  <constant name="struts.multipart.maxSize" value="10701096"/>
+  <constant name="struts.multipart.saveDir " value="E:/tmp" />
+  <package name="image" namespace="/" extends="struts-default">  
+    <action name="checkcode" class="com.image.CheckCodeAction" method="execute">  
+        <result name="success" type="stream">  
+            <param name="contentType">image/jpeg</param>  
+            <param name="inputName">imageStream</param>    
+        </result>  
+    </action>  
+  </package>
+  
+  <package name="login" namespace="/" extends="struts-default">  
+    <action name="login" class="com.action.login.LoginAction" method="execute">  
+        <result name="success">/JSP/Login/login.jsp</result>  
+        <result name="error">/index.jsp</result> 
+    </action>  
+    
+    <action name="changepassword" class="com.action.login.ChangePassword" method="execute">
+       <result name="success">/JSP/Login/login.jsp</result>
+       <result name="error">/JSP/Login/changePassword.jsp</result>
+    </action>
+  </package>
+  
+  <package name="meeting" namespace="/" extends="struts-default">
+    <action name="meetingdelete" class="com.action.delete.MeetingDelete" method="execute">
+        <result name="success">/JSP/DailyManage/meeting.jsp?offset=0</result>
+    </action>
+   
+    <action name="meetingupdate" class="com.action.update.MeetingUpdate" method="execute">
+        <result name="success">/JSP/DailyManage/meeting.jsp?offset=0</result>
+    </action>
+    
+    <action name="meetingadd" class="com.action.add.MeetingAdd" method="execute">
+        <result name="success">/JSP/DailyManage/meeting.jsp?offset=0</result>
+    </action>
+    
+    <action name="meetingsearch" class="com.action.search.MeetingSearch" method="execute">
+        <result name="success">/JSP/DailyManage/meetingSearch.jsp</result>
+    </action>
+  </package>
+  
+  <package name="notice" namespace="/" extends="struts-default">
+    <action name="noticedelete" class="com.action.delete.NoticeDelete" method="execute">
+        <result name="success">/JSP/DailyManage/notice.jsp?offset=0</result>
+    </action>
+    
+    <action name="noticeupdate" class="com.action.update.NoticeUpdate" method="execute">
+        <result name="success">/JSP/DailyManage/notice.jsp?offset=0</result>
+    </action>
+    
+    <action name="noticeadd" class="com.action.add.NoticeAdd" method="execute">
+        <result name="success">/JSP/DailyManage/notice.jsp?offset=0</result>
+    </action>
+    
+    <action name="noticesearch" class="com.action.search.NoticeSearch" method="execute">
+        <result name="success">/JSP/DailyManage/noticeSearch.jsp</result>
+    </action>
+  </package>
+  
+  <package name="oof" namespace="/" extends="struts-default">
+    <action name="oofadd" class="com.action.add.OofAdd" method="execute">
+       <result name="success">/JSP/OutManage/oof.jsp?offset=0</result>
+    </action>
+    
+    <action name="oofsearch" class="com.action.search.OofSearch" method="execute">
+        <result name="success">/JSP/OutManage/oofSearch.jsp</result>
+    </action>
+  </package>
+  
+  <package name="takeoff" namespace="/" extends="struts-default">
+    <action name="takeoffadd" class="com.action.add.TakeoffAdd" method="execute">
+       <result name="success">/JSP/OutManage/takeoff.jsp?offset=0</result>
+    </action>
+    
+    <action name="takeoffsearch" class="com.action.search.TakeoffSearch" method="execute">
+        <result name="success">/JSP/OutManage/takeoffSearch.jsp</result>
+    </action>
+  </package>
+  
+  <package name="download" namespace="/" extends="struts-default">
+    <action name="filedownload" class="com.action.download.FileDownload" method="execute">
+    </action>
+  </package>
+  
+  <package name="eplan" namespace="/" extends="struts-default">
+    <action name="eplanadd" class="com.action.add.EplanAdd" method="execute">
+       <result name="success">/JSP/PlanManage/eplan.jsp?offset=0</result>
+    </action>
+    
+    <action name="eplandelete" class="com.action.delete.EplanDelete" method="execute">
+       <result name="success">/JSP/PlanManage/eplan.jsp?offset=0</result>
+    </action>
+    
+    <action name="eplanupdate" class="com.action.update.EplanUpdate" method="execute">
+       <result name="success">/JSP/PlanManage/eplan.jsp?offset=0</result>
+    </action>
+    
+    <action name="eplansearch" class="com.action.search.EplanSearch" method="execute">
+        <result name="success">/JSP/PlanManage/eplanSearch.jsp</result>
+    </action>
+  </package>
+  
+  <package name="dplan" namespace="/" extends="struts-default">
+    <action name="dplanadd" class="com.action.add.DplanAdd" method="execute">
+       <result name="success">/JSP/PlanManage/dplan.jsp?offset=0</result>
+    </action>
+    
+    <action name="dplandelete" class="com.action.delete.DplanDelete" method="execute">
+       <result name="success">/JSP/PlanManage/dplan.jsp?offset=0</result>
+    </action>
+    
+    <action name="dplanupdate" class="com.action.update.DplanUpdate" method="execute">
+       <result name="success">/JSP/PlanManage/dplan.jsp?offset=0</result>
+    </action>
+    
+    <action name="dplansearch" class="com.action.search.DplanSearch" method="execute">
+        <result name="success">/JSP/PlanManage/dplanSearch.jsp</result>
+    </action>
+  </package>
+  
+  <package name="person" namespace="/" extends="struts-default">
+    <action name="personsearch" class="com.action.search.PersonSearch" method="execute">
+       <result name="success">/JSP/PersonManage/personSearch.jsp</result>
+    </action>
+  </package>
+  
+  <package name="oofaudit" namespace="/" extends="struts-default">
+    <action name="oofauditupdate" class="com.action.update.OofAuditUpdate" method="execute">
+       <result name="success">/JSP/AuditManage/oofAudit.jsp?offset=0</result>
+    </action>
+    
+    <action name="oofauditsearch" class="com.action.search.OofAuditSearch" method="execute">
+        <result name="success">/JSP/AuditManage/oofAuditSearch.jsp</result>
+    </action>
+  </package>
+  <package name="takeoffaudit" namespace="/" extends="struts-default">
+    <action name="takeoffauditupdate" class="com.action.update.TakeoffAuditUpdate" method="execute">
+       <result name="success">/JSP/AuditManage/takeoffAudit.jsp?offset=0</result>
+    </action>
+    
+    <action name="takeoffauditsearch" class="com.action.search.TakeoffAuditSearch" method="execute">
+       <result name="success">/JSP/AuditManage/takeoffAuditSearch.jsp</result>
+    </action>
+  </package>
+</struts>    
