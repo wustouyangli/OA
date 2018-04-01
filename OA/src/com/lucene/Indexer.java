@@ -30,7 +30,6 @@ public class Indexer {
    }
 
 public Indexer(RAMDirectory indexDirectory) throws IOException{
-      //FSDirectory indexDirectory = FSDirectory.open(new File(indexDirectoryPath));
       Analyzer analyzer = new IKAnalyzer();
       IndexWriterConfig iwc = new IndexWriterConfig(Version.LUCENE_35, analyzer);    
       writer = new IndexWriter(indexDirectory, iwc); 
@@ -49,7 +48,7 @@ public Indexer(RAMDirectory indexDirectory) throws IOException{
       while(br.ready()){
     	  buf.append(br.readLine() + "\r\n");
       }
-      //System.out.println(String.valueOf(buf));
+     
       Field contentField = new Field(LuceneConstants.CONTENTS, 
          String.valueOf(buf), 
          Field.Store.YES, Field.Index.ANALYZED);

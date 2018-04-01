@@ -38,11 +38,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       </span>
       </div>
        <div id="topPageHome">
-          <img src="Image/home.png" width="80px" height="60px" style="position: relative;top: 15%; left: 20%;">  <br>
+          <img src="Image/home.png" width="80px" height="60px" style="position: relative;top: 15%; left: 23%;">  <br>
           <p style="text-align: center;" ><a id="homeLink" href="javascript:return false;">主页</a></p>
        </div>
        <div id="topPageUser">
-          <img src="Image/user.png" width="80px" height="60px" style="position: relative; left: 40%; top: 15%;"> <br>
+          <img src="Image/user.png" width="80px" height="60px" style="position: relative; left: 56.6%; top: 15%;"> <br>
           <p style="text-align: right; margin-right: 15px;"> 
             <span style="position: relative; color: blue;"> <%=request.getSession().getAttribute("alias") %> </span> 
             <span>|</span> 

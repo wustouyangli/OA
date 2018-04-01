@@ -1,12 +1,12 @@
 @CHARSET "UTF-8";
-body{ width: 100%;height: 600px; }
+body{ width: 100%;height: 700px; }
 .menuList{ list-style: none; }
 .sonItem{ display: none;list-style: none;text-decoration: underline;color: #300000;cursor: pointer; }
 #topPage{ width:100%; height:20%;  }
 #topPageMain{ background-size: cover;width: 100%;height: 90%;border: 0; }
-#topPageTitle{ width: 70%;height: 100%;border: 0px;float: left; }
+#topPageTitle{ width: 65%;height: 100%;border: 0px;float: left; }
 #topPageHome{ width: 10%;height: 100%;border: 0px;float: left; }
-#topPageUser{ width: 20%;height: 100%;border-image: 0px;float: left; }
+#topPageUser{ width: 25%;height: 100%;border-image: 0px;float: left; }
 #topPageBottom{ background-size: cover;width: 100%;height: 10%;border: 0; }
 #leftPage{ width: 20%;height: 80%;float: left;background-color: blue; }
 #mainPage{ width: 80%;height: 80%;float: left;border: 0px; }

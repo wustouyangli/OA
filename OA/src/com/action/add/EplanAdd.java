@@ -69,14 +69,17 @@ public class EplanAdd extends ActionSupport{
 		t.setPublishManName((String)request.getSession().getAttribute("name"));
 		t.setTime(new Timestamp(new Date().getTime()));
 		t.setContent(request.getParameter("content"));
+		System.out.println("enter");
 		t.setFilename(null);
 		if (this.getFile() != null){
 		    String saveFilename = FileTools.makeFileName(this.getFileFileName());
             t.setFilename(saveFilename);
             FileOutputStream out = null;
     		FileInputStream in = null;
+    		System.out.println(saveFilename);
             try{
-            
+            	System.out.println("oyl");
+            	System.out.println(FileTools.SavePath);
                 String realSavePath = FileTools.makePath(saveFilename, FileTools.SavePath);
                 String absoluteSavePath = realSavePath + "\\" + saveFilename;
                 System.out.println("upload: " + absoluteSavePath);

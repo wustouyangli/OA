@@ -19,7 +19,7 @@ public class FileDownload extends ActionSupport{
 		HttpServletResponse response = ServletActionContext.getResponse();
 		String filename = request.getParameter("filename");
 		filename = new String(request.getParameter("filename").getBytes("iso8859-1"),"utf-8");
-		String fileSaveRootPath ="E:\\upload";
+		String fileSaveRootPath ="C:\\E\\upload";
         
         String path = findFileSavePathByFileName(filename, fileSaveRootPath);
         String realname = filename.substring(filename.indexOf("_")+1);

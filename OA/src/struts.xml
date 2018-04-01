@@ -4,7 +4,7 @@
   <constant name="struts.ui.theme" value="simple" />
   <constant name="struts.i18n.encoding" value="UTF-8" />
   <constant name="struts.multipart.maxSize" value="10701096"/>
-  <constant name="struts.multipart.saveDir " value="E:/tmp" />
+  <constant name="struts.multipart.saveDir" value="C:/E/tmp" />
   <package name="image" namespace="/" extends="struts-default">  
     <action name="checkcode" class="com.image.CheckCodeAction" method="execute">  
         <result name="success" type="stream">  

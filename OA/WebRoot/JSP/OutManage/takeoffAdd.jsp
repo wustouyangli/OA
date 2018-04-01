@@ -28,13 +28,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<script>
 	  $(function(){
 	     $("#leaveTime").datetimepicker({
-	       format: 'Y-m-d H:i:00',
-	       step: 15,
+	       format: 'Y-m-d H:00:00',
          
 	     });
 	     $("#returnTime").datetimepicker({
-	       format: 'Y-m-d H:i:00',
-	       step: 15,
+	       format: 'Y-m-d H:00:00',
          
 	     });
 	  });

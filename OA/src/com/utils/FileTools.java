@@ -4,7 +4,7 @@ import java.io.File;
 import java.util.UUID;
 
 public class FileTools {
-	public static final String SavePath = "E:\\upload";
+	public static final String SavePath = "C:\\E\\upload";
 	
 	public static String makeFileName(String filename) {
         //为防止文件覆盖的现象发生，要为上传文件产生一个唯一的文件名

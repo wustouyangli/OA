@@ -19,8 +19,8 @@ import com.lucene.Searcher;
 import com.lucene.TextFileFilter;
 
 public class LuceneSearch {
-	   //private static String indexDir = "E:/Lucene/Index";
-	   private static String dataDir = "E:/Lucene/Data";
+
+	   private static String dataDir = "C:/E/Lucene/Data";
 	   
 	   private static Indexer indexer;
 	   private static Searcher searcher;
@@ -41,35 +41,17 @@ public class LuceneSearch {
 	   }
 	   
 	   public void DeleteAll(){
-		   
-		    //System.out.println(DeleteDir(new File(indexDir)));
-	    	System.out.println(DeleteDir(new File(dataDir)));
-	    	
-	    	/*File f1 = new File(indexDir);
-			   if (!f1.exists()){
-				   if(f1.mkdirs()){
-					   System.out.println("create success");
-				   }
-				   else{
-					   System.out.println("create fail");
-				   }
+		   System.out.println(DeleteDir(new File(dataDir)));	   
+		   File f2 = new File(dataDir);
+		   if (!f2.exists()){
+		       if (f2.mkdirs()){
+			       System.out.println("create success");
+			   }else{
+				   System.out.println("create fail");
 			   }
-			   else{
-				   System.out.println("already exists");
-			   }*/
-			   
-			   File f2 = new File(dataDir);
-			   if (!f2.exists()){
-				   if (f2.mkdirs()){
-					   System.out.println("create success");
-				   }
-				   else{
-					   System.out.println("create fail");
-				   }
-			   }
-			   else{
-				   System.out.println("already exists");
-			   }
+		   }else{
+			   System.out.println("already exists");
+		   }
 	    	
 	   }
 	   
@@ -108,14 +90,12 @@ public class LuceneSearch {
 	    }
 
 	   private void CreateIndex() throws IOException{
-	       //indexer = new Indexer(indexDir); 
 		   indexer = new Indexer(indexDirectory);
 	       indexer.createIndex(dataDir, new TextFileFilter()); 
 	       indexer.close();
 	   }
 
 	   private ArrayList<Integer> Search(String searchQuery) throws IOException, ParseException{
-	       //searcher = new Searcher(indexDir);
 		   searcher = new Searcher(indexDirectory);
 	       TopDocs hits = searcher.search(searchQuery);
 	       ArrayList<Integer> idList = new ArrayList<Integer>();
