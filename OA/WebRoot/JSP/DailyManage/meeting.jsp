@@ -22,12 +22,28 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
 	<link rel="stylesheet" type="text/css" href="CSS/Manage/common.css">
+	<script src="datetimepicker/datetimepicker/jquery.js"></script>
+	<script src="datetimepicker/datetimepicker/build/jquery.datetimepicker.full.js"></script>
+	<link rel="stylesheet" type="text/css" href="datetimepicker/datetimepicker/jquery.datetimepicker.css">
+	
     <script type="text/javascript">
        function DeleteConfrim(){
           
           return confirm("确定删除此会议安排吗？");
        }
     </script>
+    <script>
+	  $(function(){
+	     $("#time_start").datetimepicker({
+	       format: 'Y-m-d 00:00:00',
+         
+	     });
+	     $("#time_end").datetimepicker({
+	       format: 'Y-m-d 00:00:00',
+         
+	     });
+	  });
+	</script>
   </head>
   
   <body id="mainBody" style="background-image: url('Image/mainBodyBg.png');background-size: cover; ">
@@ -45,18 +61,24 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         return - o1.getPublishTime().compareTo(o2.getPublishTime());
         }
     }); %>
-    
+    <img src="Image/return.png" style=" position: absolute;left: 10px;top: 10px;" height="30px" width="30px" onclick="history.back()"> <br>
     <div>
      <h1 class="title">会议</h1>
     </div>
     <div class="tools">
      <s:form method="POST" action="meetingsearch">
-       <s:textfield name="key" size="30"></s:textfield> <s:submit value="搜索"></s:submit>
+       <label>全文搜索</label> <s:textfield name="key" size="30"></s:textfield> <s:submit value="搜索"></s:submit>
        <%if (authority != null && authority.equals("admin")){ %>
        <a href="JSP/DailyManage/meetingAdd.jsp" class="addLink">增加会议安排</a>
        <%} %>
      </s:form>
-     
+     <s:form method="POST" action="meetingtimerangesearch">
+       <label>会议时间</label>
+       <input type="text" id="time_start" name="time_start" size="20"> 
+       <span>至</span>
+       <input type="text" id="time_end" name="time_end" size="20">
+       <s:submit value="搜索"></s:submit>
+     </s:form>
     
     </div>
     

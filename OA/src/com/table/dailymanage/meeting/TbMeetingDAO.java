@@ -103,5 +103,17 @@ public class TbMeetingDAO extends BaseHibernateDAO {
 			throw re;
 		}
 	}
+	
+	public List findByTimeRange(String time_start, String time_end) {
+		log.debug("finding TbMeeting instances by time range");
+		try {
+			String queryString = "from TbMeeting where time >= " + "'" + time_start + "'" + " and time <= " + "'" + time_end + "'";
+			Query queryObject = getSession().createQuery(queryString);
+			return queryObject.list();
+		} catch (RuntimeException re) {
+			log.error("find by time range failed", re);
+			throw re;
+		}
+	}
 
 }

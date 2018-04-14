@@ -63,14 +63,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body id="mainBody" style="background-image: url('Image/mainBodyBg.png');background-size: cover; ">
+    <img src="Image/return.png" style=" position: absolute;left: 10px;top: 10px;" height="30px" width="30px" onclick="history.back()"> <br>
+      
     <%@page import="com.table.dailymanage.meeting.*" %>
     <%@page import="java.text.SimpleDateFormat" %>
     <%SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"); %>
     <%TbMeetingDAO dao = new TbMeetingDAO(); %>
     <%TbMeeting m = dao.findById(Integer.parseInt(request.getParameter("id"))); %>
     <%if (m != null){ %>
-   
-    <s:form action="meetingupdate" onsubmit="return Confirm()" method="POST">
+     <s:form action="meetingupdate" onsubmit="return Confirm()" method="POST">
       <input type="text" name="id" hidden="hidden" value="<%=m.getId() %>"> <br>
       <label class="lb">会议主题</label><input type="text" name="subject" class="txt" size="30" value="<%=m.getSubject()%>"> 
       <label class="lb">会议主持</label><input type="text" name="host" class="txt" size="30" value="<%=m.getHost()%>" > <br>

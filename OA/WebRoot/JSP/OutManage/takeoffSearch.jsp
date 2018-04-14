@@ -25,6 +25,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body id="mainBody" style="background-image: url('Image/mainBodyBg.png');background-size: cover; ">
+  <img src="Image/return.png" style=" position: absolute;left: 10px;top: 10px;" height="30px" width="30px" onclick="history.back()"> <br>
     <%String authority = (String)request.getSession().getAttribute("authority"); %>
     <%ArrayList<Integer> idList = (ArrayList<Integer>)request.getSession().getAttribute("idList"); %>
     <%@page import="com.table.outmanage.takeoff.*" %>

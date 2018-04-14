@@ -38,6 +38,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body style="background-image: url('Image/officeTower.png'); background-size: cover;" >
+    <img src="Image/return.png" style=" position: absolute;left: 10px;top: 10px;" height="30px" width="30px" onclick="history.back()"> <br>
   	<marquee id="title" onMouseOut="this.start()" onMouseOver="this.stop()" >修改密码界面</marquee>
     <div id="mainDiv" style="background-image: url('Image/leftPage.png'); background-size: cover;">
 

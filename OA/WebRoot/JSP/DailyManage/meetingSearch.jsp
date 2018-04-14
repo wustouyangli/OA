@@ -29,7 +29,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <%ArrayList<Integer> idList = (ArrayList<Integer>)request.getSession().getAttribute("idList"); %>
     <%@page import="com.table.dailymanage.meeting.*" %>
     <%TbMeetingDAO dao = new TbMeetingDAO(); %>
-  
+    <img src="Image/return.png" style=" position: absolute;left: 10px;top: 10px;" height="30px" width="30px" onclick="history.back()"> <br>
     <div style="width: 100%;">
      <h1 style="text-align: center;">查询结果如下</h1>
     </div>

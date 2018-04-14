@@ -65,7 +65,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body id="mainBody" style="background-image: url('Image/mainBodyBg.png');background-size: cover; ">
-    
+    <img src="Image/return.png" style=" position: absolute;left: 10px;top: 10px;" height="30px" width="30px" onclick="history.back()"> <br>
     <form action="meetingadd" onsubmit="return Confirm()" method="POST">
       <input type="text" name="id" hidden="hidden"> <br>
       <label class="lb">会议主题</label><input type="text" name="subject" class="txt" size="30"> 

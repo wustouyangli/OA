@@ -62,6 +62,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body id="mainBody" style="background-image: url('Image/mainBodyBg.png');background-size: cover; ">
+  <img src="Image/return.png" style=" position: absolute;left: 10px;top: 10px;" height="30px" width="30px" onclick="history.back()"> <br>
     <s:form action="takeoffadd" onsubmit="return Confirm()" method="POST">
       <input type="text" name="id" hidden="hidden"> <br>
       <label class="lb">离开时间</label><input type="text" id="leaveTime" name="leaveTime" class="txt" size="30"> <br>

@@ -32,6 +32,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body style="background-image: url('Image/mainBodyBg.png');background-size: cover; ">
+  <img src="Image/return.png" style=" position: absolute;left: 10px;top: 10px;" height="30px" width="30px" onclick="history.back()"> <br>
     <%@page import="com.table.outmanage.takeoff.*" %>
     <%@page import="java.text.SimpleDateFormat" %>
     <%SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd HH:mm"); %>

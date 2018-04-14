@@ -37,6 +37,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <%TbMeetingDAO dao = new TbMeetingDAO(); %>
     <%TbMeeting m = dao.findById(Integer.parseInt(request.getParameter("id"))); %>
     <%if (m != null){ %> 
+    <img src="Image/return.png" style=" position: absolute;left: 10px;top: 10px;" height="30px" width="30px" onclick="history.back()"> <br>
     <input type="text" name="id" hidden="hidden" value="<%=m.getId() %>"> <br>
     <label class="lb">会议主题</label><input type="text" name="subject" class="txt" disabled="true" size="30" value="<%=m.getSubject()%>"> 
     <label class="lb">会议主持</label><input type="text" name="host" class="txt" disabled="true" size="30" value="<%=m.getHost()%>" > <br>
