@@ -31,9 +31,9 @@
 			<attribute name="owner.project.facets" value="web.struts2"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="D:/SogouSoftware/IKAnalyzer3.2.5Stable.jar"/>
-	<classpathentry kind="lib" path="D:/SogouSoftware/lucene-core-3.5.0.jar"/>
-	<classpathentry kind="lib" path="D:/SogouSoftware/commons-fileupload-1.2.1.jar"/>
-	<classpathentry kind="lib" path="D:/SogouSoftware/commons-io-1.4.jar"/>
+	<classpathentry kind="lib" path="C:/D/plugin/commons-fileupload-1.2.1.jar"/>
+	<classpathentry kind="lib" path="C:/D/plugin/commons-io-1.4.jar"/>
+	<classpathentry kind="lib" path="C:/D/plugin/IKAnalyzer3.2.5Stable.jar"/>
+	<classpathentry kind="lib" path="C:/D/plugin/lucene-core-3.5.0.jar"/>
 	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
 </classpath>
