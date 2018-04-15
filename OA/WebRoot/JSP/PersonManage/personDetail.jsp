@@ -25,7 +25,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <style type="text/css">
       .lb{width: 100px; display: inline-block;}
       .mainDiv{ margin-left: 100px; margin-top: 20px; }
-      .txt{ color: black; font-size: 18px; }
+      .txt{ color: black; font-size: 18px; background-color: white;}
     </style>
     
   </head>

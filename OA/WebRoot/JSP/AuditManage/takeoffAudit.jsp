@@ -48,7 +48,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     
     <div class="tools">
      <s:form method="POST" action="takeoffauditsearch">
-       <s:textfield name="key" size="30"></s:textfield> <s:submit value="搜索"></s:submit> <br>
+       <label>全文搜索</label> <s:textfield name="key" size="30"></s:textfield> <s:submit value="搜索"></s:submit> <br>
      </s:form>
     </div>
     

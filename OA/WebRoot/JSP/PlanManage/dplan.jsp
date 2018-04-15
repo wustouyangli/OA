@@ -56,7 +56,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     
     <div class="tools">
      <s:form method="POST" action="dplansearch">
-       <s:textfield name="key" size="30"></s:textfield> <s:submit value="搜索"></s:submit> 
+       <label>全文搜索</label> <s:textfield name="key" size="30"></s:textfield> <s:submit value="搜索"></s:submit> 
        <%if (authority != null && authority.equals("admin")){ %>
         <a href="JSP/PlanManage/dplanAdd.jsp" class="addLink">增加部门计划</a>
        <%} %>

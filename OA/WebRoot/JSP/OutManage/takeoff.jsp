@@ -48,7 +48,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     
     <div class="tools">
      <s:form method="POST" action="takeoffsearch">
-       <s:textfield name="key" size="30"></s:textfield> <s:submit value="搜索"></s:submit>
+       <label>全文搜索</label> <s:textfield name="key" size="30"></s:textfield> <s:submit value="搜索"></s:submit>
        <a href="JSP/OutManage/takeoffAdd.jsp" class="addLink">增加请假申请</a>
      </s:form>
     </div>

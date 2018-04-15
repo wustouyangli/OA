@@ -53,7 +53,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     
     <div class="tools">
      <s:form method="POST" action="noticesearch">
-       <s:textfield name="key" size="30"></s:textfield> <s:submit value="搜索"></s:submit> 
+       <label>全文搜索</label> <s:textfield name="key" size="30"></s:textfield> <s:submit value="搜索"></s:submit> 
        <%if (authority != null && authority.equals("admin")){ %>
        <a href="JSP/DailyManage/noticeAdd.jsp" class="addLink">增加公告通知</a>
     <%} %>
