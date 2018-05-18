@@ -37,7 +37,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
          if (subject.value == "" ||
              department.value == "" ||
              content.value == ""){
-             alert("内容不完整(上传文件可选)");
+             //alert("内容不完整(上传文件可选)");
              return false;
          }
          return confirm("确定提交新的部门计划吗？");
@@ -56,7 +56,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!--       <textarea  name="content" rows="5" cols="80" ></textarea> <br> -->
       <script type="text/javascript" src="CKEditor/ckeditor/ckeditor.js"></script>
       <div class="ckeDiv">
-       <textarea rows="10" cols="20" class="ckeditor" name="content"></textarea>
+       <textarea  name="content" rows="10" cols="100" style="background-color:white;font-size:18px"></textarea>
       </div>
       <label class="lb">上传文件</label><input type="file" name="file"> <br>
       <input type="submit" value="提交"> <br>

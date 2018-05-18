@@ -25,9 +25,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <script src="JS/jquery-1.7.1.js"></script>
     <script >
 		function check(){
-		    var oldPassword = document.getElementsByName("oldPassword")[0];
 		    var newPassword = document.getElementsByName("newPassword")[0];
-			if(oldPassword.value == "" || newPassword.value == ""){
+		    var confirmPassword = document.getElementsByName("confirmPassword")[0];
+			if(newPassword.value == "" || confirmPassword.value == ""){
 				alert("密码为空");
 				return false;
 			}
@@ -44,8 +44,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
       <form action="changepassword" method="POST" onsubmit="return check()">
         <label class="lb">用户名</label> <input type="text" size="30" name="alias" value="<%=request.getSession().getAttribute("alias") %>" disabled="disabled"> <br>
-        <label class="lb">原密码</label> <input type="password" size="30" name="oldPassword" id="oldPassword"> <br>
         <label class="lb">新密码</label> <input type="password" size="30" name="newPassword" id="newPassword"> <br>
+        <label class="lb">确认密码</label> <input type="password" size="30" name="confirmPassword" id="confirmPassword"> <br>
         <p align="center"> <input type="submit" value="提交"> </p>
         <%String error = (String)request.getSession().getAttribute("errorOfChangePsd"); %>
         <%if (error != null){ %>

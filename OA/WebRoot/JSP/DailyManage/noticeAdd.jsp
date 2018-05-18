@@ -54,7 +54,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       <!-- <textarea  name="content" rows="5" cols="80" ></textarea> <br> -->
       <script type="text/javascript" src="CKEditor/ckeditor/ckeditor.js"></script>
       <div class="ckeDiv">
-       <textarea rows="10" cols="20" class="ckeditor" name="content"></textarea>
+       <textarea  name="content" rows="10" cols="100" style="background-color:white;font-size:18px"></textarea>
       </div>
       <s:submit value="提交" ></s:submit>
     </s:form>

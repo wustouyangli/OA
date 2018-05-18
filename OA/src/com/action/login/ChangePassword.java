@@ -16,18 +16,18 @@ public class ChangePassword extends ActionSupport{
 		HttpServletRequest request = ServletActionContext.getRequest();
 		TbUserDAO dao = new TbUserDAO();
 		String alias = (String)request.getSession().getAttribute("alias");
-		String oldPassword = request.getParameter("oldPassword");
 		String newPassword = request.getParameter("newPassword");
+		String confirmPassword = request.getParameter("confirmPassword");
 		System.out.println(alias);
-		System.out.println(oldPassword);
 		System.out.println(newPassword);
+		System.out.println(confirmPassword);
 		List list = dao.findByAlias(alias);
 		System.out.println(list.size());
 	    if (list.size() > 0){
 	    	TbUser t = (TbUser)list.get(0);
-	    	String password = t.getPassword();
-	    	if(!password.equals(oldPassword)){
-	    		request.getSession().setAttribute("errorOfChangePsd", "原密码输入不正确");
+	    	
+	    	if(!newPassword.equals(confirmPassword)){
+	    		request.getSession().setAttribute("errorOfChangePsd", "确认密码与新密码不一致");
 	    		return ERROR;
 	    	}
 	    	else{
