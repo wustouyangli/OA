@@ -3,40 +3,35 @@ $(function(){
 	var iNow=0;
      
     function run(n) {
+     var oDate = new Date(); 
+     oDate.setMonth(oDate.getMonth()+n);
+     var year = oDate.getFullYear(); 
+     var month = oDate.getMonth(); 
+     var today = oDate.getDate(); 
  
-     var oDate = new Date(); //定义时间
-     oDate.setMonth(oDate.getMonth()+n);//设置月份
-     var year = oDate.getFullYear(); //年
-     var month = oDate.getMonth(); //月
-     var today = oDate.getDate(); //日
- 
-     //计算本月有多少天
      var allDay = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][month];
  
-     //判断闰年
      if(month == 1) {
       if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
        allDay = 29;
       }
      }
  
-     //判断本月第一天是星期几
-     oDate.setDate(1); //时间调整到本月第一天
-     var week = oDate.getDay(); //读取本月第一天是星期几
+     oDate.setDate(1); 
+     var week = oDate.getDay(); 
  
      //console.log(week);
-     $(".dateList").empty();//每次清空
-     //插入空白
+     $(".dateList").empty();
+     
  
      for(var i = 0; i < week; i++) {
       $(".dateList").append("<li></li>");
      }
  
-     //日期插入到dateList
      for(var i = 1; i <= allDay; i++) {
       $(".dateList").append("<li>" + i + "</li>")
      }
-     //标记颜色=====================
+ 
      $(".dateList li").each(function(i, elm){
       //console.log(index,elm);
       var val = $(this).text();
@@ -56,8 +51,7 @@ $(function(){
       }
      });
  
-     //定义标题日期
-     $("#calendar h4").text(year + "年" + (month + 1) + "月");
+     $("#calendar h4").text(year + "锟斤拷" + (month + 1) + "锟斤拷");
     };
     run(0);
      
